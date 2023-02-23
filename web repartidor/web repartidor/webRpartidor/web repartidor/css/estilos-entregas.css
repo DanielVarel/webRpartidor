@@ -1,0 +1,125 @@
+body{
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+}
+
+.header{
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color: #1f8010;
+    position: fixed;
+}
+
+h2 {
+    color: #fff;
+    margin-left: 20px;
+}
+
+.toggle-menu{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    position: fixed;
+}
+
+.toggle-menu:hover{
+	cursor: pointer;
+}
+
+.toggle-menu span{
+	background-color: #fff;
+	display: block;
+	width: 40px;
+	height: 6px;
+	margin-bottom: .5rem;	
+    z-index: 1;
+}
+
+
+.main-menu{
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1f8010;
+    transition: all  0.5s ease-in-out;
+    transform: translateY(-200%);
+}
+
+.mostrar-menu{
+    transform: translateY(60px);
+}
+
+.main-menu__item{
+    padding: 20px;
+}
+
+.main-menu__link{
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.main-nav{
+    height: 47px;
+}
+
+.lista-pedidos{
+    margin: 0;
+    padding: 0%;
+}
+
+.contenedor{
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 30px;
+    padding: 10px;
+    border: 1px solid #1f8010;
+    color: #fff;
+    cursor: pointer;
+}
+
+.empresa{
+    margin: 0;
+    text-align: center;
+    color: black;
+    color: #fff;
+}
+
+.container-modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.70);
+    z-index: 1;
+    visibility: hidden;
+}
+
+.content-modal{
+    width: 90%;
+    background-color: red;
+    margin: auto;
+    background-color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+#closeModal{
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #32DB17;
+}
+

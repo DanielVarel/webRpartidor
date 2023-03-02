@@ -82,7 +82,9 @@ var usuarios = [
     
 ];
 
-
+// toggleMenuElement.addEventListener('click', ()=>{
+//     mainMenuElement.classList.toggle('mostrar-menu');
+// });
 
 function mostrarEntrega(){
     usuarios.forEach(function (envio, i){
@@ -111,11 +113,13 @@ function detallesEnvio(i) {
                                                                   <img src="${detallesActuales.mapa}" class="imagen-mapa">
                                                                   <p>${productos}</p>
                                                                   <div class="cerrar-modal">
-                                                                     <button class="entregado" onclick="cerrarModal()">Cancel</button>
+                                                                     <button class="entregado">Cancel</button>
                                                                   </div>
                                                                   <div class="cerrar-modal">
                                                                      <button class="entregado">Confirm</button>
-                                                                  </div>`;
+                                                                  </div>
+                                                                 
+                                                                  `;
 }
 
 mostrarEntrega();
@@ -131,7 +135,7 @@ function abrirModal(){
 }
 
 // Cerar en ventana
-function cerrarModal(){
+modal.onclick = function(){
     modal.style.visibility = "hidden";
 }
 

@@ -84,6 +84,7 @@ button {
     padding: 10px;
     background-color: #1f8010;
     margin-bottom: 20px;
+    
 }
 
 .footer a{
@@ -94,16 +95,8 @@ button {
 .des-sociales{
     text-align: center;
 }
-
-.enlace{
-    width: 100%;
-    display: flex;
-    justify-content: center;  
-}
-
 .link{
-    text-decoration: none;
-    color: #1f8010;
+    text-align: center;
 }
 
 .redes-sociales{
@@ -114,15 +107,4 @@ button {
 
 .caja:focus {
     border-bottom: 3px solid #1f8010;
-}
-
-.warninigs{
-    color: #ff0000;
-}
-
-.enviado{
-    text-align: center;
-    padding: 20px;
-    background-color: #5ec755;
-    border-radius: 30px;
 }

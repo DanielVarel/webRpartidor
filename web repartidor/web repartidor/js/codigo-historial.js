@@ -27,57 +27,6 @@ var usuarios = [
                 descripcion: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!"
             }
         ]
-    },
-    {
-        empresa: "Walmart",
-        direccion: "Tegucigalpa, Cerro Grande",
-        distancia: "10km",
-        color: "#005CB5",
-        mapa : "img/mapa.png",
-        precio: 400,
-        envios: [
-            {
-                nombreProducto: "Producto 1",
-                descripcion: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!"
-            },
-            {
-                nombreProducto: "Producto 2",
-                descripcion: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!"
-            },
-            {
-                nombreProducto: "Producto 2",
-                descripcion: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!"
-            }
-        ]
-    },
-    {
-        empresa: "Bigos",
-        direccion: "Tegucigalpa, Cerro Grande",
-        distancia: "12km",
-        color: "#E88B00",
-        mapa : "img/mapa.png",
-        precio: 400,
-        envios: [
-            {
-                nombreProducto: "Producto 2",
-                descripcion: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!"
-            }
-        ]
-    }
-    ,
-    {
-        empresa: "Bigos",
-        direccion: "Tegucigalpa, Cerro Grande",
-        distancia: "12km",
-        color: "#E88B00",
-        mapa : "img/mapa.png",
-        precio: 400,
-        envios: [
-            {
-                nombreProducto: "Producto 2",
-                descripcion: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!"
-            }
-        ]
     }
     
 ];

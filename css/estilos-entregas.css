@@ -1,0 +1,123 @@
+body{
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+}
+
+.lista-pedidos{
+    margin: 0;
+    padding: 0%;
+    margin-top: 130px;
+}
+
+.contenedor{
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 30px;
+    padding: 10px;
+    border: 1px solid #1f8010;
+    color: #fff;
+    cursor: pointer;
+}
+
+.empresa{
+    margin: 0;
+    text-align: center;
+    color: black;
+    color: #fff;
+}
+
+.container-modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+    background-color: rgba(0, 0, 0, 0.70);
+    visibility: hidden;
+}
+
+.content-modal{
+    width: 90%;
+    margin: auto;
+    background-color: #fff;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding: 30px;  
+    box-sizing: border-box;
+}
+
+#closeModal{
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #32DB17;
+}
+
+.imagen-mapa{
+    width: 250px;
+}
+
+/* nuevo modal */
+
+nav {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #1f8010;
+    box-sizing: border-box;
+}
+
+h2{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #fff ;
+}
+
+.logo{
+    margin: 10px 10px;
+    color: #fff;
+}
+
+.options{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.pendiente{
+    margin-top: 110px;
+    text-align: center;
+}
+
+.entregado{
+    background-color: #1f8010;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    font-size: 18px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.cerrar-secion{
+    position: absolute;
+    top: 0;
+    right: 30px;
+    font-size: 17px;
+}

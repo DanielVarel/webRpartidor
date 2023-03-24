@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    font-family: 'Manrope', sans-serif;
+}
+
+form {
+    position: absolute;
+    min-width: 280px;
+    max-width: 500px;
+    width: 90%;
+    color: #1f8010;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    margin: auto;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: -1px 7px 20px 2px rgba(46, 156, 57, 1);
+}
+
+h1 {
+    position: relative;
+    font-size: 30px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+input {
+    display: block;
+    width: 250px;
+    height: 20px;
+    padding: 5px 6px;
+    border: none;
+    outline: none;
+    margin: auto;
+    margin-bottom: 35px;
+    border-bottom: 1px solid #32DB17;
+}
+
+
+.acuerdo {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+button {
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 15px;
+    background-color: #1f8010;
+    border: none;
+    color: #fff;
+    margin-bottom: 20px;
+    border: 1px solid #1f8010;
+}
+
+.footer {
+    width: 100%;
+    height: 91px;
+    position: absolute;
+    bottom: 20px;
+}
+
+.footer i {
+    border-radius: 50%;
+    color: #fff;
+    font-size: 25px;
+    border: none;
+    border: 1px solid #fff;
+    padding: 10px;
+    background-color: #1f8010;
+    margin-bottom: 20px;
+}
+
+.footer a{
+    margin: 5px;
+    text-align: center;
+}
+
+.des-sociales{
+    text-align: center;
+}
+
+.enlace{
+    width: 100%;
+    display: flex;
+    justify-content: center;  
+}
+
+.link{
+    text-decoration: none;
+    color: #1f8010;
+}
+
+.redes-sociales{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.caja:focus {
+    border-bottom: 3px solid #1f8010;
+}
+
+.warninigs{
+    color: #ff0000;
+}
+
+.enviado{
+    text-align: center;
+    padding: 20px;
+    background-color: #5ec755;
+    border-radius: 30px;
+}

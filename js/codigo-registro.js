@@ -4,6 +4,7 @@ const password = document.getElementById("password");
 const phoneNumber = document.getElementById("phone-number");
 const enviado = document.getElementById("enviado");
 var usuarioRegistrados = [];
+
 var localStorage = window.localStorage;
 
 const form = document.getElementById("form");
@@ -21,7 +22,7 @@ var usuarioRegistrados = [
                 direccion: "Tegucigalpa, Cerro Grande",
                 distancia: "20km",
                 color: "#8317CD",
-                mapa : "img/mapa.png",
+                mapa : {lat:14.169889 ,lng: -87.308289},
                 precio: 400,
                 envios: [
                     {
@@ -39,7 +40,7 @@ var usuarioRegistrados = [
                 direccion: "Tegucigalpa, Cerro Grande",
                 distancia: "10km",
                 color: "#005CB5",
-                mapa : "img/mapa.png",
+                mapa : {lat:14.075599 ,lng: -87.200554},
                 precio: 400,
                 envios: [
                     {
@@ -51,42 +52,32 @@ var usuarioRegistrados = [
                         descripcion: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!"
                     },
                     {
-                        nombreProducto: "Producto 2",
+                        nombreProducto: "Producto 3",
                         descripcion: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!"
                     }
                 ]
-            },
+            }    
+        ],
+        pendiente:
             {
-                empresa: "Bigos",
+                empresa: "Hugo",
                 direccion: "Tegucigalpa, Cerro Grande",
-                distancia: "12km",
-                color: "#E88B00",
-                mapa : "img/mapa.png",
+                distancia: "20km",
+                mapa: "img/mapa.png",
+                color: "#8317CD",
                 precio: 400,
                 envios: [
+                    {
+                        nombreProducto: "Producto 1",
+                        descripcion: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!"
+                    },
                     {
                         nombreProducto: "Producto 2",
                         descripcion: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!"
                     }
                 ]
             }
-            ,
-            {
-                empresa: "Bigos",
-                direccion: "Tegucigalpa, Cerro Grande",
-                distancia: "12km",
-                color: "#E88B00",
-                mapa : "img/mapa.png",
-                precio: 400,
-                envios: [
-                    {
-                        nombreProducto: "Producto 2",
-                        descripcion: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!"
-                    }
-                ]
-            }
-            
-        ]
+         
     },{
         name: "Alejandro Avila", 
         email: "alejandro.2000@gamil.com",
@@ -94,46 +85,6 @@ var usuarioRegistrados = [
         phoneNumber: "1234099987",
         entregas: [
             {
-                empresa: "Hugo",
-                direccion: "Tegucigalpa, Cerro Grande",
-                distancia: "20km",
-                color: "#8317CD",
-                mapa : "img/mapa.png",
-                precio: 400,
-                envios: [
-                    {
-                        nombreProducto: "Producto 1",
-                        descripcion: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!"
-                    },
-                    {
-                        nombreProducto: "Producto 2",
-                        descripcion: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!"
-                    }
-                ]
-            },
-            {
-                empresa: "Walmart",
-                direccion: "Tegucigalpa, Cerro Grande",
-                distancia: "10km",
-                color: "#005CB5",
-                mapa : "img/mapa.png",
-                precio: 400,
-                envios: [
-                    {
-                        nombreProducto: "Producto 1",
-                        descripcion: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!"
-                    },
-                    {
-                        nombreProducto: "Producto 2",
-                        descripcion: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!"
-                    },
-                    {
-                        nombreProducto: "Producto 2",
-                        descripcion: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!"
-                    }
-                ]
-            },
-            {
                 empresa: "Bigos",
                 direccion: "Tegucigalpa, Cerro Grande",
                 distancia: "12km",
@@ -162,8 +113,12 @@ var usuarioRegistrados = [
                     }
                 ]
             }
-            
-        ]
+        ],
+        pendiente:
+            {
+                
+            }
+        
     }
 ];
 
@@ -172,8 +127,6 @@ if (localStorage.getItem('usuarioRegistrados') == null) {
 }else{
     usuarioRegistrados = JSON.parse(localStorage.getItem('usuarioRegistrados'));
 }
-
-
 
 form.addEventListener("submit", e=>{
     e.preventDefault();
@@ -224,9 +177,20 @@ form.addEventListener("submit", e=>{
     }else{
         enviado.innerHTML = `<p>Enviado</p>`;
         enviado.style.display = "block";
+
+        let usuario = {
+            email: email.value,
+            name:  nombre.value,
+            password: password.value,
+            phoneNumber: phoneNumber.value
+        }
+    
+        usuarioRegistrados.push(usuario)
+        localStorage.setItem('usuarioRegistrados', JSON.stringify(usuarioRegistrados));
         
     }
-    
+
+   
 });
 
 

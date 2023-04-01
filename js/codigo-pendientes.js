@@ -1,4 +1,3 @@
-
 var pendiente = [
     {
         empresa: "Hugo",
@@ -24,14 +23,24 @@ var pendiente = [
 //     mainMenuElement.classList.toggle('mostrar-menu');
 // });
 
+// var pendiente = [];
+
+// var localStorage = window.localStorage;
+
+// if (localStorage.getItem('pendiente') == null) {
+//     localStorage.setItem('pendiente', JSON.stringify(pendiente)); //de JSON a cadena
+// }else{
+//     pendiente = JSON.parse(localStorage.getItem('pendiente'));
+// }
+
 
 function mostrarPedios() {
 
     let productos = "";
 
-    for(let i=0; i<pendiente[0].envios.length;  i++){
-        productos  += `<h4>${pendiente[0].envios[i].nombreProducto}<h4>
-                       <p>${pendiente[0].envios[i].descripcion}</p>`;
+    for(let i=0; i<pendiente.length;  i++){
+        productos  += `<h4>${pendiente[i].nombreProducto}<h4>
+                       <p>${pendiente[i].descripcion}</p>`;
     }
 
     document.getElementById("pedientes").innerHTML = `<h1>delivery in process</h1>

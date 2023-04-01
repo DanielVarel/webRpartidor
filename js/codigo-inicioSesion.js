@@ -7,14 +7,14 @@ const parrafo = document.getElementById("warninigs");
 
 // var usuarioRegistrados = [];
 
-const usuarioRegistrados = [
-    {
-        name: "Daniel Avila", 
-        email: "daniel.avila.a.v.2000@gmail.com",
-        password: "12",
-        phoneNumber: "123456789"
-    }
-];
+// const usuarioRegistrados = [
+//     {
+//         name: "Daniel Avila", 
+//         email: "daniel.avila.a.v.2000@gmail.com",
+//         password: "12",
+//         phoneNumber: "123456789"
+//     }
+// ];
 
 // if (localStorage.getItem('usuarioRegistrados') == null) {
 //     localStorage.setItem('usuarioRegistrados', JSON.stringify(usuarioRegistrados)); //de JSON a cadena
@@ -22,7 +22,9 @@ const usuarioRegistrados = [
 //     usuarioRegistrados = JSON.parse(localStorage.getItem('usuarioRegistrados'));
 // }
 
-console.log(email.value);
+usuarioRegistrados = JSON.parse(localStorage.getItem('usuarioRegistrados'));
+
+console.log(usuarioRegistrados);
 
 form.addEventListener("submit", e=>{
     e.preventDefault();
@@ -31,22 +33,21 @@ form.addEventListener("submit", e=>{
     parrafo.innerHTML = "";
 
     for(let i=0; i<usuarioRegistrados.length; i++){
-        if(email.value != usuarioRegistrados[i].email || email.value == ""){
+        if(email.value != usuarioRegistrados[i].email){
             encontrado = false;
         }
-        if(password.value != usuarioRegistrados[i].password || password.value == ""){
+        else if(password.value != usuarioRegistrados[i].password){
             encontrado = false;
         }
-        if(password.value == usuarioRegistrados[i].password && email.value == email.value == usuarioRegistrados[i].email){
+        else if(password.value == usuarioRegistrados[i].password && email.value == usuarioRegistrados[i].email){
             encontrado = true;
+            console.log("es correcto",encontrado)
+            boton =  location.href = "index3.html";
         }
     }
 
     if(encontrado == false){
         parrafo.innerHTML = `The mail is not valid <br>
                             or the password is wrong`;
-    }else if(encontrado == true){
-        boton =  location.href = "index3.html";
     }
-    localStorage.setItem('usuarioRegistrados', JSON.stringify(usuarioRegistrados));
 });

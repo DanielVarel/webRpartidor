@@ -59,6 +59,10 @@ body{
 .imagen-mapa{
     width: 250px;
 }
+#map{
+    width: 90%;
+    height: 300px;
+}
 
 /* nuevo modal */
 
